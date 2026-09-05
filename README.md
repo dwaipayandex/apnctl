@@ -5,8 +5,10 @@
 Distributed as a prebuilt binary only.
 
 - Supported device: Nokia AOD311NK (5G32-A), FW AOD311NK_R_1.0 / web build 2402.20.06.A17
-- Current package: macOS Apple Silicon (arm64) executable
-- No installation required — download `apnctl`, make it executable, run it
+- macOS builds: `apnctl` is a universal binary (x86_64 + arm64 — runs on both
+  Intel and Apple Silicon Macs). `apnctl-arm64` and `apnctl-x86_64` are the
+  single-architecture builds if you only want one.
+- No installation required — download, `chmod +x`, run
 
 > For use on hardware you own. The tool performs only the same APN read/write
 > operations available in the device's own web UI.
@@ -60,8 +62,10 @@ The router ships with the web password set to the device serial number
 
 ## Integrity
 
-SHA-256 of `apnctl`:
+SHA-256 checksums:
 
 ```
-ae650913b483679493850ebd040bfbd2761be440161f6b553ddb22224e15812f
+f14629be4f9f1d9633e0852a18d94b791ec8984cb2b5047d8e0bf43c56c70fbc  apnctl          (universal, x86_64 + arm64)
+62bb0d8a9956652e3fafb0473590634a3eab48b44204ba9d815633a0e6caf42b  apnctl-arm64
+4f96ba6c7c60eff9abf08efad771829bf0de910ed14d3c042ceb1a08b18e912d  apnctl-x86_64
 ```
