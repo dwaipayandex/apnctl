@@ -65,7 +65,10 @@ The router ships with the web password set to the device serial number
 SHA-256 checksums:
 
 ```
-f14629be4f9f1d9633e0852a18d94b791ec8984cb2b5047d8e0bf43c56c70fbc  apnctl          (universal, x86_64 + arm64)
-62bb0d8a9956652e3fafb0473590634a3eab48b44204ba9d815633a0e6caf42b  apnctl-arm64
-4f96ba6c7c60eff9abf08efad771829bf0de910ed14d3c042ceb1a08b18e912d  apnctl-x86_64
+ae0a0b145eff5926156339a379e0437362f046afe4b1d3dd41a2c2396d569ba4  apnctl          (universal, x86_64 + arm64)
+c87c2435b008a4e34a2785a3e20b0ef1dedf8e6c1878ca601468d070fca38f50  apnctl-arm64
+ece92fc0109962475deaf99a04138c2f8f4c918d10298772b25b751c3d6b4830  apnctl-x86_64
 ```
+
+Sessions are cached in `~/.config/apnctl/` (0600) so consecutive commands don't
+re-authenticate; the device refuses rapid back-to-back logins.
